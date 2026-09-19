@@ -55,11 +55,18 @@ public class PermutationGenerator {
 			
 			//method call to reverse everything after pivot i
 		}
-		
-		
-		
-		
+
+	}
+	
+	public static void swap (int[] numbers, int i, int j) {
+		int placeholder = numbers[i];
+		numbers[i] = numbers[j];
+		numbers[j] = placeholder;
 		}
+	
+	public static void reverse () {
+		
+	}
 	
 	public static void main(String[] args) {
 		generateSequence(3);
