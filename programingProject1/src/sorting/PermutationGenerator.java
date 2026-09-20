@@ -17,9 +17,10 @@ public class PermutationGenerator {
 		
 		int count = 0;
 		
-		while (count < 3) {
+		while (count < 5) {
 			generate.generatePerms(numbers);
 			System.out.println(Arrays.toString(numbers));
+			count++;
 		}
 	}
 	
