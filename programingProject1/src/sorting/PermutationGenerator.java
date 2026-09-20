@@ -12,6 +12,15 @@ public class PermutationGenerator {
 		}
 		
 		System.out.println(Arrays.toString(numbers));
+		
+		PermutationGenerator generate = new PermutationGenerator();
+		
+		int count = 0;
+		
+		while (count < 3) {
+			generate.generatePerms(numbers);
+			System.out.println(Arrays.toString(numbers));
+		}
 	}
 	
 	/**
@@ -82,6 +91,5 @@ public class PermutationGenerator {
 	public static void main(String[] args) {
 		generateSequence(3);
 	}
-
 	
 }
