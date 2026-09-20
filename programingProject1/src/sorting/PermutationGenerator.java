@@ -35,7 +35,7 @@ public class PermutationGenerator {
 	 * 
 	 * @param numbers
 	 */
-	public static void generatePerms(int[] numbers) {
+	public  void generatePerms(int[] numbers) {
 		int i = numbers.length - 2;  //2nd to last element of array
 		
 		//finds pivot i 
@@ -45,32 +45,43 @@ public class PermutationGenerator {
 		
 		
 		if (i >= 0) {
-			int j = numbers.length - 1; //last element
+			int j = numbers.length - 1;
 			
 			//finds successor j 
 			while (j >= 0 && numbers[j] <= numbers[i]) {
 				j--;
 			}
-			//method call to swap them
 			
-			//method call to reverse everything after pivot i
+			swap(numbers, i, j);
+			
+			reverse(numbers, i + 1);
+			
+			
 		}
 
 	}
 	
-	public static void swap (int[] numbers, int i, int j) {
-		int placeholder = numbers[i];
+	public void swap (int[] numbers, int i, int j) {
+		int temp = numbers[i];
 		numbers[i] = numbers[j];
-		numbers[j] = placeholder;
-		}
+		numbers[j] = temp;
+	}
 	
-	public static void reverse () {
+	public void reverse (int[] numbers, int start) {
+		int end = numbers.length - 1;
+		while (start < end) {
+			swap(numbers, start, end);
+			start++;
+			end--;
+		}
 		
 	}
 	
+
+	
 	public static void main(String[] args) {
 		generateSequence(3);
-
 	}
 
+	
 }
