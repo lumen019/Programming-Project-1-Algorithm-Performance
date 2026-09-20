@@ -17,7 +17,8 @@ public class PermutationGenerator {
 		
 		int count = 0;
 		
-		//only works for n=3 for 6 possible perms. need to change count for larger n
+		//only works by manually changing count for now for different n's
+		//TODO
 		while (count < 23) {
 			generate.generatePerms(numbers);
 			System.out.println(Arrays.toString(numbers));
