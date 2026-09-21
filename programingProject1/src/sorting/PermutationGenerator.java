@@ -13,14 +13,13 @@ public class PermutationGenerator {
 		
 		System.out.println(Arrays.toString(numbers));
 		
-		PermutationGenerator generate = new PermutationGenerator();
 		
 		int count = 0;
 		
 		//only works by manually changing count for now for different n's
 		//TODO
 		while (count < 23) {
-			generate.generatePerms(numbers);
+			generatePerms(numbers);
 			System.out.println(Arrays.toString(numbers));
 			count++;
 		}
@@ -47,7 +46,10 @@ public class PermutationGenerator {
 	 * 
 	 * @param numbers
 	 */
-	public  void generatePerms(int[] numbers) {
+	public static boolean generatePerms(int[] numbers) {
+		
+		if (numbers.length <= 1) return false;
+		
 		int i = numbers.length - 2;  //2nd to last element of array
 		
 		//finds pivot i 
@@ -73,26 +75,18 @@ public class PermutationGenerator {
 
 	}
 	
-	public void swap (int[] numbers, int i, int j) {
+	public static void swap (int[] numbers, int i, int j) {
 		int temp = numbers[i];
 		numbers[i] = numbers[j];
 		numbers[j] = temp;
 	}
 	
-	public void reverse (int[] numbers, int start) {
+	public static void reverse (int[] numbers, int start) {
 		int end = numbers.length - 1;
 		while (start < end) {
 			swap(numbers, start, end);
 			start++;
 			end--;
 		}
-		
 	}
-	
-
-	
-	public static void main(String[] args) {
-		generateSequence(4);
-	}
-	
 }
