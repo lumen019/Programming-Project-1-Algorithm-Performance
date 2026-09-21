@@ -13,21 +13,56 @@ Team Member
 Lia Day Implementation Lead
 Angel Aguirre Verification Lead
 David Arreola Communications Lead
-Saul Prieto Unkown for now
+Saul Prieto Support where needed
 
 3) Repository & Access (Required for Projects 1–4)
 • Platform: GitHub
-• Repository URL: 
-• Instructor invited as viewer by checkpoint?: 
-• Repo Structure Requirement (summary):
+• Repository URL: https://github.com/lumen019/Programming-Project-1-Algorithm-Performance
+• Instructor invited as viewer by checkpoint?: Yes
+• Repo Structure Requirement (summary): Design-Notes, Plan, and Scope Included
 4) Milestones (Timeline)
-Sorting and Permutation finished by 9/20 Checkpoint
-Stuff
+Github Setup 9/13 Lia
+Permutation and Sorts added 9/13 Lia
+Reports done for Checkpoint 9/20 David
+Heapsort 9/20 Saul
+Shakersort 9/20 Lia
+Mergesort 9/20 Angel
+Quicksort 9/20 Angel
+
 
 5) Task Backlog (Assignments + Status)
+Angel Mergesort Done
+Quicksort
+Lia Shakersort Done
+Permutation Generator Done
+Quicksort
+Saul Heapsort Done
+Quicksort
+David Design Notes Done
+Scope Done
+Plan Done
+Quicksort
 
 6) Verification Plan
+Correctness Checks/ Tests to run
+Test with a Junit
+Negative Tests
+Edge cases to verify
+Empty Inputs
+Duplicates
+Expected vs. Actual
+Confirm no loops
+Performance Checks
 
 7) Risks / Blockers
+Final Driver working since we all have different formats
+Broken Build
+Test for actual results
 
 8) Update Log
+Github Created
+Sorts added
+Permutation Generator Added
+Proj 1 plan Added
+Scope Added
+Design Notes Added
