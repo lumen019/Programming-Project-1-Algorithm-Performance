@@ -14,14 +14,9 @@ public class PermutationGenerator {
 		System.out.println(Arrays.toString(numbers));
 		
 		
-		int count = 0;
-		
-		//only works by manually changing count for now for different n's
-		//TODO
-		while (count < 23) {
-			generatePerms(numbers);
+		//while generate permutation is true print
+		while (generatePerms(numbers)) {
 			System.out.println(Arrays.toString(numbers));
-			count++;
 		}
 	}
 	
@@ -48,6 +43,7 @@ public class PermutationGenerator {
 	 */
 	public static boolean generatePerms(int[] numbers) {
 		
+		//if data set has only one value or is empty return false.
 		if (numbers.length <= 1) return false;
 		
 		int i = numbers.length - 2;  //2nd to last element of array
@@ -57,21 +53,23 @@ public class PermutationGenerator {
 			i--; //loop is only needed if 2nd to last element isn't the pivot
 		}
 		
-		
-		if (i >= 0) {
-			int j = numbers.length - 1;
-			
-			//finds successor j 
-			while (j >= 0 && numbers[j] <= numbers[i]) {
-				j--;
-			}
-			
-			swap(numbers, i, j);
-			
-			reverse(numbers, i + 1);
-			
-			
+		//no pivot found means final permutation.
+		if (i < 0) {
+			return false;
 		}
+		
+		int j = numbers.length - 1;
+			
+		//finds successor j 
+		while (j >= 0 && numbers[j] <= numbers[i]) {
+			j--;
+		}
+			
+		swap(numbers, i, j);
+			
+		reverse(numbers, i + 1);
+			
+		return true;
 
 	}
 	
