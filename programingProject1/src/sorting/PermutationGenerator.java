@@ -85,13 +85,5 @@ public class PermutationGenerator {
 			start++;
 			end--;
 		}
-		
 	}
-	
-
-	
-	public static void main(String[] args) {
-		generateSequence(4);
-	}
-	
 }
