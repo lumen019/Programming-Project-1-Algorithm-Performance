@@ -20,6 +20,7 @@ public class ShakerSort {
 		while (swapped) {
 			swapped = false;
 			
+			//forward pass
 			for(int i = start; i< end; i++) {
 				if(numbers[i] > numbers[i+1]) {
 					
@@ -34,6 +35,7 @@ public class ShakerSort {
 			swapped = false;
 			end--;
 			
+			//backwards pass
 			for(int i = end - 1; i >= start; i--) {
 				if(numbers[i] > numbers [i + 1]) {
 					

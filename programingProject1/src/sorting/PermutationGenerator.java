@@ -46,7 +46,10 @@ public class PermutationGenerator {
 	 * 
 	 * @param numbers
 	 */
-	public static void generatePerms(int[] numbers) {
+	public static boolean generatePerms(int[] numbers) {
+		
+		if (numbers.length <= 1) return false;
+		
 		int i = numbers.length - 2;  //2nd to last element of array
 		
 		//finds pivot i 
