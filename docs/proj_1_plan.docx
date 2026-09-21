@@ -27,7 +27,7 @@ Reports done for Checkpoint 9/20 David
 Heapsort 9/20 Saul
 Shakersort 9/20 Lia
 Mergesort 9/20 Angel
-Quicksort 9/20 
+Quicksort 9/20 Angel
 
 
 5) Task Backlog (Assignments + Status)
@@ -38,14 +38,19 @@ David Helping with Reports Fin
 
 6) Verification Plan
 Correctness Checks/ Tests to run
-
+Test with a Junit
+Negative Tests
 Edge cases to verify
-
+Empty Inputs
+Duplicates
 Expected vs. Actual
-
+Confirm no loops
 Performance Checks
 
 7) Risks / Blockers
+Final Driver working since we all have different formats
+Broken Build
+Test for actual results
 
 8) Update Log
 Github Created
