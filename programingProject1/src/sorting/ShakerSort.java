@@ -13,9 +13,30 @@ public class ShakerSort {
 			for(int i = start; i< end; i++) {
 				if(numbers[i] > numbers[i+1]) {
 					
+					int temp = numbers[i];
+					numbers[i] = numbers[i + 1];
+					numbers[i+1] = temp;
+					swapped = true;
 				}
 			}
-		}	
-	}
-		
+			
+			if(!swapped) break;
+			swapped = false;
+			end--;
+			
+			for(int i = end - 1; i >= start; i--) {
+				if(numbers[i] > numbers [i + 1]) {
+					
+					int temp = numbers[i];
+					numbers[i] = numbers[i + 1];
+					numbers[i+1] = temp;
+					swapped = true;
+				}
+			}
+			start++;
+				
+		}
+	}	
 }
+		
+
