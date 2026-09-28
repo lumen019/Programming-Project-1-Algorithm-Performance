@@ -87,4 +87,8 @@ public class PermutationGenerator {
 			end--;
 		}
 	}
+	
+	public static void main(String[] args) {
+		generateSequence(6);
+	}
 }
