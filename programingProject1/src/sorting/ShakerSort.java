@@ -49,6 +49,18 @@ public class ShakerSort {
 				
 		}
 	}	
+	
+	
+	public static void main(String[] args) {
+		int[]numbers = {1, 6, 5, 15, 9, 25};
+		
+		shakerSort(numbers);
+		
+		for(int element : numbers) {
+			System.out.println(element);
+		}
+
+	}
 }
 		
 
