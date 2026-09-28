@@ -5,6 +5,9 @@ package sorting;
  */
 public class HeapSort {
 
+  /** Number of element comparisons made during the current sort. */
+  private static int comparisons;
+
   /**
    * Ensures the subtree rooted at index i satisfies the max-heap property:
    * every parent node is >= its children.
@@ -19,13 +22,19 @@ public class HeapSort {
     int r = 2 * i + 2;
 
     // if left child exists and is bigger than current largest, update largest
-    if (l < n && arr[l] > arr[largest]) {
-      largest = l;
+    if (l < n) {
+      comparisons++;
+      if (l < n && arr[l] > arr[largest]) {
+        largest = l;
+      }
     }
-
+      
     // if right child exists and is bigger than current largest, update largest
-    if (r < n && arr[r] > arr[largest]) {
-      largest = r;
+    if (r < n) {
+      comparisons++;
+      if (r < n && arr[r] > arr[largest]) {
+        largest = r;
+      }
     }
 
     // if the largest value isn't the root, swap and keep heapifying downward
@@ -41,7 +50,10 @@ public class HeapSort {
    * @param arr the array to sort
    * @param n   the number of elements in the array
    */
-  public static void sort(int arr[], int n) {
+  public static int sort(int arr[]) {
+    comparisons = 0;
+    int n = arr.length;
+    
     // build max-heap.
     for (int i = n / 2 - 1; i >= 0; i--) {
       heapify(arr, n, i);
@@ -52,6 +64,8 @@ public class HeapSort {
       swap(arr, 0, i);
       heapify(arr, i, 0);
     }
+    
+    return comparisons;
   }
 
   /**
