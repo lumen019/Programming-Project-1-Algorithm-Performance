@@ -131,7 +131,14 @@ public class Driver {
             return comparisons;
         }
     }
-
+    /**
+     * Compiles a summary of how many permutations were given as well a sorting algorithms total comparisons,
+     * the minimum amount of comparisons for a given permutation, and the maximum amount of comparisons for a given permutation.
+     * 
+     * @param results the full list of results from all sorts, containing the sortName, permutation and comparisons
+     * @param sortName the value used to pick out which sort's results to include
+     * @return
+     */
     private static long[] computeStats(List<Result> results, String sortName) {
         long count = 0;
         long total = 0;
