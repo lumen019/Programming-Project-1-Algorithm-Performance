@@ -6,6 +6,7 @@ public class MergeSort {
 	
 	private static int comparisons;
 	
+	//wrapper to return comparisons
 	public static int sort(int[] a) {
 		comparisons = 0;
 		mergeSort(a);
@@ -45,12 +46,14 @@ public class MergeSort {
 			k++;
 		}
 		
+		//in case either arr is left with one element left
 		while(i < left.length) {
 			arr[k] = left[i];
 			i++;
 			k++;
 		}
 		
+		//in case either arr is left with one element left
 		while(j < right.length) {
 			arr[k] = right[j];
 			j++;

@@ -2,6 +2,13 @@ package sorting;
 
 
 public class QuickSort{
+	private static int comparisons;
+	
+	public static int sort(int[] numbers) {
+		comparisons = 0;
+		quickSort(numbers, 0, numbers.length - 1);
+		return comparisons;
+	}
 	
 	/**
 	 * partition puts everything smaller than the pivot on the left of the
@@ -14,6 +21,7 @@ public class QuickSort{
 		int i = low - 1; 
 		
 		for(int j = low; j <= high - 1; j++) {
+			comparisons++;
 			if(numbers[j] < pivot) {
 				i++;
 				swap(numbers, i, j);

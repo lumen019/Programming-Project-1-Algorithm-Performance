@@ -2,6 +2,14 @@ package sorting;
 
 public class ShakerSort {
 	
+	private static int comparisons;
+	
+	public static int sort(int[] numbers) {
+		comparisons = 0;
+		shakerSort(numbers);
+		return comparisons;
+	}
+	
 	/**
 	 * Sorts the array by comparing neighboring elements
 	 * First forward pass moves the largest element to the end. 
@@ -22,6 +30,7 @@ public class ShakerSort {
 			
 			//forward pass
 			for(int i = start; i< end; i++) {
+				comparisons++;
 				if(numbers[i] > numbers[i+1]) {
 					
 					int temp = numbers[i];
@@ -37,6 +46,7 @@ public class ShakerSort {
 			
 			//backwards pass
 			for(int i = end - 1; i >= start; i--) {
+				comparisons++;
 				if(numbers[i] > numbers [i + 1]) {
 					
 					int temp = numbers[i];
