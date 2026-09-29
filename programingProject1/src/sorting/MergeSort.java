@@ -33,7 +33,7 @@ public class MergeSort {
 		
 		while (i < left.length && j < right.length) {
 			comparisons++;
-			if (left[i] <= right[i]) {
+			if (left[i] <= right[j]) {
 				arr[k] = left[i];
 				i++;
 			}
@@ -45,9 +45,9 @@ public class MergeSort {
 			k++;
 		}
 		
-		while(j < left.length) {
-			arr[k] = right[j];
-			j++;
+		while(i < left.length) {
+			arr[k] = left[i];
+			i++;
 			k++;
 		}
 		
@@ -58,4 +58,5 @@ public class MergeSort {
 		}
 	}
 
+	
 }
